@@ -70,7 +70,7 @@ Evaluated on held-out validation split (274 images, not seen during training):
 | Recall | 94.7% |
 | Best epoch | 48 / 100 |
 
-These results represent a production-ready detector. The 98.2% mAP50 reflects detection of animals in varied thermal contrast conditions including partial canopy occlusion, group clustering, and mixed-temperature backgrounds.
+These results represent a production-ready detector. The 98.2% mAP50 reflects detection of animals in varied thermal contrast conditions including partial canopy occlusion, group clustering, and mixed-temperature backgrounds. Training on the BAMBI dataset — which includes solar-heated terrain, warm rock outcroppings, and sun-baked ground cover — specifically reduces false positives from non-biological heat sources, a known challenge in forested thermal survey environments.
 
 ---
 
@@ -84,7 +84,7 @@ These results represent a production-ready detector. The 98.2% mAP50 reflects de
 
 1. Operator programs a transect or grid mission in DJI Pilot 2 / FlightHub 2
 2. Aircraft launches and begins the survey pattern
-3. Manifold 3 subscribes to the M4T thermal stream via PSDK and runs the detection model at up to 30 fps
+3. Manifold 3 subscribes to the M4T thermal stream via PSDK and runs the detection model at up to 30 fps (pending final on-device benchmark; Manifold 3 unit arriving late April 2026)
 4. Each detection fires a georeferenced event: species label, bounding box, GPS coordinates, UTC timestamp, confidence score
 5. Running count and detection map update on the ground-station tablet in near real time
 6. On detection of a high-density cluster above a configurable threshold, the autonomy framework triggers an orbit branch for a confirmation count
@@ -148,7 +148,17 @@ The ONNX file exported at opset 12 is converted on-device using `trtexec --fp16`
 
 ---
 
-## 9. Contact & Organization
+## 9. Requested Support from DJI
+
+SAI is submitting this algorithm as a working system, not a concept. The following support from DJI's engineering and ecosystem teams would accelerate deployment:
+
+- **Quantization guidance** — confirmation that the submitted ONNX (opset 12, FP32) and 500-image calibration set meet DJI AI Training Platform requirements for INT8/FP16 quantization, or feedback on any format adjustments needed
+- **PSDK thermal stream specs** — clarification on the M4T radiometric stream frame format (16-bit vs. normalized 8-bit) as delivered to a Manifold-hosted PSDK application, to ensure the preprocessing pipeline matches training-time normalization
+- **Algorithm listing** — if the model is accepted, inclusion in the DJI AI algorithm marketplace to support discovery by state wildlife agencies and ecological research institutions
+
+---
+
+## 10. Contact & Organization
 
 **Adam Pierce** — Founder, Sentinel Aerial Inspections  
 Faith & Harmony LLC | Hampton Roads, Virginia  
