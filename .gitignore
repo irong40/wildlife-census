@@ -41,3 +41,4 @@ Thumbs.db
 # Secrets
 .env
 *.key
+sai-census-app/
