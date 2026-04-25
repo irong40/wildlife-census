@@ -1,0 +1,10 @@
+# SAI Wildlife Census — Thermal Deer Detection
+# YOLOv8 dataset configuration
+
+path: D:/Projects/wildlife-census/training
+train: images/train
+val: images/val
+
+# Classes
+names:
+  0: deer

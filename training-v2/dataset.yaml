@@ -1,0 +1,9 @@
+# SAI Wildlife Census v2 — Thermal Animal Detection
+# BAMBI (1,826 thermal frames) + AWIR (53 white-tailed deer)
+
+path: D:/Projects/wildlife-census/training-v2
+train: images/train
+val: images/val
+
+names:
+  0: animal

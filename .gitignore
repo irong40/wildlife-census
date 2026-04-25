@@ -1,0 +1,43 @@
+# Datasets — too large for git, download via scripts/
+datasets/
+calibration/
+calibration.zip
+
+# Training runs and weights
+runs/
+*.pt
+*.engine
+*.plan
+
+# Exported models — distribute via Releases
+models/*.onnx
+models/*.trt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Build artifacts (C++ app)
+sai-census-app/build/
+sai-census-app/build-*/
+*.o
+*.so
+*.a
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Claude / IDE
+.claude/
+
+# Secrets
+.env
+*.key

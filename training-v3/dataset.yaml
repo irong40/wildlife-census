@@ -1,0 +1,12 @@
+# SAI Wildlife Census — Thermal Deer Detection v3
+# Built by build_dataset.py — do not edit manually
+# Total: 73923 train / 1567 val / 1577 test
+
+path: D:/Projects/wildlife-census/training-v3
+train: images/train
+val:   images/val
+test:  images/test
+
+nc: 1
+names:
+  0: deer
