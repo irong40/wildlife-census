@@ -1,3 +1,6 @@
+# Generated demo output
+demo/
+
 # Datasets — too large for git, download via scripts/
 datasets/
 calibration/
