@@ -1,0 +1,20 @@
+# BAMBI Thermal Wildlife Detection - Class Definitions
+# Source: https://huggingface.co/cpraschl/bambi-thermal-detection
+#
+# Class-agnostic single-class detection model
+# All mammalian wildlife species are detected as "animal"
+
+names:
+  0: animal
+
+# Number of classes
+nc: 1
+
+# Training species (all labeled as "animal"):
+#   - Red deer (Cervus elaphus)
+#   - Wild boar (Sus scrofa)
+#   - Roe deer (Capreolus capreolus)
+#   - Fallow deer
+#   - Chamois
+#   - Alpine ibex
+#   - Wolves

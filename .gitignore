@@ -45,3 +45,11 @@ Thumbs.db
 .env
 *.key
 sai-census-app/
+
+# ML training datasets (images/labels) — keep out of git
+training/images/
+training/labels/
+training-v2/images/
+training-v2/labels/
+training-v3/images/
+training-v3/labels/
